@@ -6,3 +6,6 @@ ALTER DATABASE inventario MODIFY NAME = test;
 
 -- Borrar la base de datos
 DROP DATABASE test;
+
+-- Cambiar el nombre de una tabla
+sp_rename 'dbo.OrderDetails', 'orderDetails';
