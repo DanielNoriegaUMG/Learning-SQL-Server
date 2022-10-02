@@ -58,8 +58,9 @@ INNER JOIN [dbo].[orderDetails] AS [det]
 ON [ord].[order_id] = [det].order_id
 WHERE [ord].order_id = 1;
 
-SELECT [ord].order_date, [p].product_description, [det].[orderDetail_quantity],[det].[orderDetail_price]
+SELECT [ord].order_date AS 'FECHA VENTA', [p].product_description AS 'NOMBRE PRODUCTO', [det].[orderDetail_quantity] AS 'CANTIDAD',[det].[orderDetail_price] AS 'PRECIO', [m].[measure_description] AS 'DESCRIPCION PRODUCTO'
 FROM [dbo].[orders] AS [ord]
 INNER JOIN [dbo].[orderDetails] AS [det] ON [ord].[order_id] = [det].[order_id]
-INNER JOIN [dbo].products AS [p] ON [det].product_id = [p].product_id
+INNER JOIN [dbo].[products] AS [p] ON [det].[product_id] = [p].[product_id]
+INNER JOIN [dbo].[measures] AS [m] ON [det].[measure_id] = [m].[measure_id]
 WHERE [ord].[order_id] = 2;
