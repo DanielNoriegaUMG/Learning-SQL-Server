@@ -14,3 +14,9 @@ CREATE TABLE [dbo].[departaments](
 	[departament_id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 	[departament_name] VARCHAR(75) NOT NULL
 );
+
+-- agregar llave foranea
+ALTER TABLE [dbo].[employees]
+ADD CONSTRAINT employees_departaments_fk
+FOREIGN KEY ([departament_id])
+REFERENCES [dbo].[departaments] (departament_id);
