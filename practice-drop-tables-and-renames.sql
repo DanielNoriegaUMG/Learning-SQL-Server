@@ -13,3 +13,11 @@ ADD [Status] INT NOT NULL;
 -- Eliminar la columna de la tabla
 ALTER TABLE [dbo].[example]
 DROP COLUMN [Status];
+
+-- Alterar nombre de la una base de datos
+ALTER DATABASE nombre MODIFY NAME = nuevoNombre;
+
+
+
+
+
