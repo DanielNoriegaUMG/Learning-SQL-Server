@@ -1,3 +1,4 @@
+USE inventario;
 SELECT *FROM [dbo].[measures];
 SELECT *FROM [dbo].[products];
 SELECT *FROM [dbo].[orders];

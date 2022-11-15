@@ -6,4 +6,4 @@ VALUES ('Sistemas'),
 	('Producción'),
 	('Ventas'),
 	('Compras'),
-	('Bodega')
+	('Bodega');
