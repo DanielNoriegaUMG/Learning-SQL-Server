@@ -1,12 +1,12 @@
 CREATE DATABASE enterprise;
-
 -- Modificar el nombre de la base de datos
 ALTER DATABASE enterprise MODIFY NAME = company;
 
 USE company;
 CREATE TABLE [dbo].[employees](
 	[employee_id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-	[employee_name] VARCHAR (100) NULL,
+	[employee_name] VARCHAR (60) NULL,
+	[employee_surname] VARCHAR (60) NULL,
 	[employee_birthday] DATE NOT NULL,
 	[employee_gender]INT NOT NULL,
 	[employee_salary] DECIMAL(8,2) NOT NULL,
