@@ -38,8 +38,7 @@ CASE
 	ELSE 'M'
 END AS 'genero',
 e.employee_salary,
-
-CONCAT(e.position_name,' / ',d.departament_name,' / ',e.employee_salary)
+CONCAT(e.position_name,' / ',d.departament_name,' / ',e.employee_salary) AS 'Posicion / Depto / Salario'
 FROM [dbo].[employees] AS [e]
 INNER JOIN [dbo].[departaments] AS [d] ON e.departament_id = d.departament_id
 ORDER BY [e].[employee_salary] DESC;
