@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[employees](
 	[employee_name] VARCHAR (100) NULL,
 	[employee_birthday] DATE NOT NULL,
 	[employee_gender]INT NOT NULL,
-	[employee_salary] DECIMAL(6,2) NOT NULL,
+	[employee_salary] DECIMAL(8,2) NOT NULL,
 	[position_name] VARCHAR(50) NOT NULL,
 	[created] DATETIME NOT NULL,
 	[departament_id] INT NULL
@@ -36,4 +36,4 @@ DROP TABLE [dbo].[employees];
 
 --Cambiar el tipo de dato de una columna
 ALTER TABLE employees
-ALTER COLUMN employee_salary DECIMAL(6,2);
+ALTER COLUMN employee_salary DECIMAL(8,2);
