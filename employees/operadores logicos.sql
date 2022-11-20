@@ -27,3 +27,22 @@ SELECT *FROM [dbo].[employees] AS [e]
 WHERE [e].[employee_salary] != 9500 
 	AND [e].[employee_salary] != 9500.90 
 	AND [e].[employee_salary] != 9000.00;
+
+-- mostrar los empleados que pertenezcan al departamento  de sistemas, RRHH, Produccion
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[departament_id] IN (1,2,3);
+
+-- mostrar los empleados que no pertenezcan al departamento de sistemas, RRHH, Produccion
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[departament_id] NOT IN (1,2,3);
+
+-- Mostrar empleados que no tengan un departamento asignado
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[departament_id] IS NULL;
+
+-- mostar empleados que SI tengan un departamento asignado
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[departament_id] IS NOT NULL;
+
+
+SELECT *FROM [dbo].[departaments];
