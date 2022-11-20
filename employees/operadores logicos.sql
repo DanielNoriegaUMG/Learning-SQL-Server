@@ -59,3 +59,12 @@ WHERE [e].[employee_name] LIKE '%N%';
 -- Buscar lo empleados que tengan una N al final de su nombre
 SELECT *FROM [dbo].[employees] AS [e]
 WHERE [e].[employee_name] LIKE '%N';
+
+-- Seleccionar los empleados con un sueldo entre 6000 y 9500
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[employee_salary] BETWEEN 6000.00 AND 9500.00;
+
+-- Seleccionar empleados que cumplan años entre 1990-01-01 hasta 2002-01-01
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[employee_birthday] BETWEEN '1990-01-01' AND '2002-01-01'
+ORDER BY [e].employee_birthday ASC;
