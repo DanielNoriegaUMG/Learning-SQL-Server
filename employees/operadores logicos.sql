@@ -3,7 +3,7 @@
 
 USE company;
 
--- ver empleados con sueldos maypres o iguales a 4500.00
+-- ver empleados con sueldos mayores o iguales a 4500.00
 SELECT *FROM [dbo].[employees] AS [e]
 WHERE [e].[employee_salary] >= 4500.00;
 
@@ -44,5 +44,18 @@ WHERE [e].[departament_id] IS NULL;
 SELECT *FROM [dbo].[employees] AS [e]
 WHERE [e].[departament_id] IS NOT NULL;
 
-
 SELECT *FROM [dbo].[departaments];
+
+-- Operadores BETWEEN, EXISTS, LIKE
+
+-- Buscar los empleados Que empiecen con letra A seguido de cualquier cosa
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[employee_name] LIKE 'A%';
+
+--Buscar los empleados que tengan una N en medio del nombre
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[employee_name] LIKE '%N%';
+
+-- Buscar lo empleados que tengan una N al final de su nombre
+SELECT *FROM [dbo].[employees] AS [e]
+WHERE [e].[employee_name] LIKE '%N';
