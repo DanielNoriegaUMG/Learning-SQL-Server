@@ -73,3 +73,8 @@ ORDER BY [e].employee_birthday ASC;
 SELECT *FROM [dbo].employees AS [e]
 WHERE [e].[employee_surname] LIKE '[MA]%'
 ORDER BY [e].[employee_surname] ASC;
+
+-- Seleccionar empleados en donde su apellidos inicien desde la A hasta la E
+SELECT *FROM [dbo].employees AS [e]
+WHERE [e].[employee_surname] LIKE '[A-E]%'
+ORDER BY [e].[employee_surname] ASC;
