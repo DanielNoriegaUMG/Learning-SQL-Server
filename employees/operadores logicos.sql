@@ -68,3 +68,8 @@ WHERE [e].[employee_salary] BETWEEN 6000.00 AND 9500.00;
 SELECT *FROM [dbo].[employees] AS [e]
 WHERE [e].[employee_birthday] BETWEEN '1990-01-01' AND '2002-01-01'
 ORDER BY [e].employee_birthday ASC;
+
+-- Seleccionar empleados que sus apellidos inicien con las letras M y A por arden alfabetico
+SELECT *FROM [dbo].employees AS [e]
+WHERE [e].[employee_surname] LIKE '[MA]%'
+ORDER BY [e].[employee_surname] ASC;
