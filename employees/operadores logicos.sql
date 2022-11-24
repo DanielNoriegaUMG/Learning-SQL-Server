@@ -78,3 +78,8 @@ ORDER BY [e].[employee_surname] ASC;
 SELECT *FROM [dbo].employees AS [e]
 WHERE [e].[employee_surname] LIKE '[A-E]%'
 ORDER BY [e].[employee_surname] ASC;
+
+-- Seleccionar solo a empleados donde su apellido no inicie con M, S y A
+SELECT *FROM [dbo].employees AS [e]
+WHERE [e].[employee_surname] LIKE '[^msa]%'
+ORDER BY [e].[employee_surname] ASC;
