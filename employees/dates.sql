@@ -22,7 +22,6 @@ SELECT DATEPART(MONTH, '2002-10-08'); --SELECCIONE EL MES DE MI CUMPLEAÑOS
 SELECT DATEPART(MONTH, GETDATE()); --SELECCIONAR EL MES ACTUAL
 
 --OBTENER A EMPLEADOS QUE SU AÑO DE NACIMIENTO SEA DEL AÑO 2000 EN ADELANTE
-
 SELECT 
 	CONCAT
 	(
@@ -33,4 +32,28 @@ SELECT
 		DATEPART(YEAR, [e].[employee_birthday])
 	) AS fecha, *
 FROM [dbo].[employees] AS [e]
-WHERE [e].[employee_birthday] >= '2000-10-08';
+WHERE [e].[employee_birthday] >= '2000-01-01';
+
+--SELECCIONAR EL NOMBRE DEL MES
+
+SELECT DATENAME(WEEK,GETDATE()); -- DEVUELVE EL NUMERO DE SEMANA
+SELECT DATENAME(WEEKDAY,GETDATE()); --DEVUELVE EL NOMBRE DEL DIA DEL SISTEMA
+SELECT DATENAME(MONTH,GETDATE()); -- DEVUELVE EL NOMBRE DEL MES DEL SISTEMA
+
+
+SELECT
+CONCAT
+(
+	[e].[employee_name],
+	' ',
+	[e].[employee_surname]
+) AS 'FULL NAME',
+CONCAT
+(
+	DATENAME(WEEKDAY,[e].[employee_birthday]),
+	' of ',
+	DATENAME(MONTH,[e].[employee_birthday]),
+	' from ',
+	DATEPART(YEAR,[e].[employee_birthday])
+) AS 'BIRTHDAY'
+FROM [dbo].[employees] AS [e];
