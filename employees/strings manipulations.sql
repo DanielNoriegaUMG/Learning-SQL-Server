@@ -29,3 +29,15 @@ SELECT REPLACE([employee_name],'Daniel','ENRIQUE') FROM[dbo].[employees];
 
 -- REPLICATE(valor,repetir n veces)
 SELECT REPLICATE('DANIEL ', 3);
+
+--CHARINDEX(valorBuscado,cadenaDondeBuscar,posicionIniciar)
+--NOTA: posicionIniciar es opcional
+SELECT CHARINDEX('@','danielenoriega@yahoo.com',3); --ver la posicion donde se encuentra la @
+
+
+
+SELECT CHARINDEX('e',[employee_name]) AS 'POSICION LETRA' FROM [dbo].[employees]; -- seleccionar donde se encuentra la letra "e"
+
+SELECT STUFF('d.noriegachajon@gmail.com',1,CHARINDEX('@','d.noriegachajon@gmail.com'),'confidencial');
+
+SELECT STUFF([mail],1,CHARINDEX('@',[mail]), 'confidencial') FROM [dbo].[mails];
