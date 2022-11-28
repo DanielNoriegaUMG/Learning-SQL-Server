@@ -21,3 +21,11 @@ SELECT LEFT([employee_birthday], 4) FROM [dbo].[employees]; -- seleccionar el añ
 
 --VER TAMAÑO DE LA CADENA
 SELECT LEN([employee_name]) FROM [dbo].[employees];
+
+-- ALTERATIONS
+-- REPLACE(valor,valorBuscar,reemplazo)
+SELECT REPLACE('JAVASCRIPT ES LO MEJOR','JAVASCRIPT','JAVA');
+SELECT REPLACE([employee_name],'Daniel','ENRIQUE') FROM[dbo].[employees];
+
+-- REPLICATE(valor,repetir n veces)
+SELECT REPLICATE('DANIEL ', 3);
