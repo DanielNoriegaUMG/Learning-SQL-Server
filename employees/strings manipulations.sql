@@ -17,4 +17,7 @@ SELECT RIGHT([employee_birthday], 2) FROM [dbo].[employees]; -- seleccionar el d
 
 --SELECCIONAR DESDE LA IZQUIERDA
 SELECT LEFT('DANIEL', 2);
-SELECT LEFT([employee_birthday], 4) FROM [dbo].[employees]; -- seleccionar el año de nacimiento
+SELECT LEFT([employee_birthday], 4) FROM [dbo].[employees]; -- seleccionar el año de 
+
+--VER TAMAÑO DE LA CADENA
+SELECT LEN([employee_name]) FROM [dbo].[employees];
