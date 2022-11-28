@@ -10,3 +10,11 @@ SELECT SUBSTRING([employee_surname],1,3)FROM [dbo].[employees];
 SELECT 
 	SUBSTRING(CONCAT([employee_name],' ',[employee_surname]),1,6)
 FROM [dbo].[employees];
+
+--SELECCIONAR DESDE LA DERECHA
+SELECT RIGHT('DANIEL',2);
+SELECT RIGHT([employee_birthday], 2) FROM [dbo].[employees]; -- seleccionar el dia de nacimiento
+
+--SELECCIONAR DESDE LA IZQUIERDA
+SELECT LEFT('DANIEL', 2);
+SELECT LEFT([employee_birthday], 4) FROM [dbo].[employees]; -- seleccionar el año de nacimiento
