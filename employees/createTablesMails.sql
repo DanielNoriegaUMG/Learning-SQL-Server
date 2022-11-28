@@ -1,0 +1,5 @@
+CREATE TABLE mails(
+	id_mail INT IDENTITY(1,1) PRIMARY KEY,
+	mail VARCHAR(60) NOT NULL UNIQUE,
+	employee_id INT
+);
