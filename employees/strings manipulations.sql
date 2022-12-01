@@ -38,6 +38,9 @@ SELECT CHARINDEX('@','danielenoriega@yahoo.com',3); --ver la posicion donde se e
 
 SELECT CHARINDEX('e',[employee_name]) AS 'POSICION LETRA' FROM [dbo].[employees]; -- seleccionar donde se encuentra la letra "e"
 
+
+--FUNCTION STUFF
+--STUFF(valorBuscado,inicio,fin,palabraEditar)
 SELECT STUFF('d.noriegachajon@gmail.com',1,CHARINDEX('@','d.noriegachajon@gmail.com'),'confidencial');
 
-SELECT STUFF([mail],1,CHARINDEX('@',[mail]), 'confidencial') FROM [dbo].[mails];
+SELECT STUFF([mail],1,CHARINDEX('@',[mail])-1, 'confidencial') FROM [dbo].[mails];
