@@ -64,3 +64,5 @@ SELECT VALUE FROM string_split('MELANY,DANIEL,AROLDO,JUAN,AURELIO',','); --separ
 SELECT VALUE FROM string_split('MELANY DANIEL AROLDO JUAN AURELIO',' '); --separar mendiante espacios
 
 SELECT VALUE FROM string_split('MELANY-DANIEL-AROLDO-JUAN-AURELIO','-'); -- separar mediante guiones
+
+SELECT compatibility_level FROM sys.databases WHERE name = 'company'; -- ver el nivel de compatibilidad
