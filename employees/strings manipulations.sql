@@ -34,8 +34,6 @@ SELECT REPLICATE('DANIEL ', 3);
 --NOTA: posicionIniciar es opcional
 SELECT CHARINDEX('@','danielenoriega@yahoo.com',3); --ver la posicion donde se encuentra la @
 
-
-
 SELECT CHARINDEX('e',[employee_name]) AS 'POSICION LETRA' FROM [dbo].[employees]; -- seleccionar donde se encuentra la letra "e"
 
 
@@ -44,3 +42,25 @@ SELECT CHARINDEX('e',[employee_name]) AS 'POSICION LETRA' FROM [dbo].[employees]
 SELECT STUFF('d.noriegachajon@gmail.com',1,CHARINDEX('@','d.noriegachajon@gmail.com'),'confidencial');
 
 SELECT STUFF([mail],1,CHARINDEX('@',[mail])-1, 'confidencial') FROM [dbo].[mails];
+
+--FUNCTION LOWER
+SELECT LOWER('DANIEL NORIEGA');
+SELECT LOWER([employee_name]) FROM [dbo].[employees];
+SELECT LOWER([employee_surname]) FROM [dbo].[employees];
+SELECT LOWER(CONCAT([employee_name],' ',[employee_surname])) FROM [dbo].[employees];
+
+--FUNCTION UPPER
+SELECT UPPER('daniel noriega');
+SELECT UPPER([employee_name]) FROM [dbo].[employees];
+SELECT UPPER([employee_surname]) FROM [dbo].[employees];
+SELECT UPPER(CONCAT([employee_name],' ',[employee_surname])) FROM [dbo].[employees];
+SELECT UPPER([mail]) FROM [dbo].[mails] AS [m];
+
+
+SELECT FORMAT([employee_id],'D5') FROM [dbo].[employees]; -- agregar 5 ceros al id
+
+SELECT VALUE FROM string_split('MELANY,DANIEL,AROLDO,JUAN,AURELIO',','); --separar mediante las comas
+
+SELECT VALUE FROM string_split('MELANY DANIEL AROLDO JUAN AURELIO',' '); --separar mendiante espacios
+
+SELECT VALUE FROM string_split('MELANY-DANIEL-AROLDO-JUAN-AURELIO','-'); -- separar mediante guiones
